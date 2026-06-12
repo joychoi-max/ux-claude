@@ -1,26 +1,47 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* 굿럭키 디자인 토큰 — docs/DESIGN.md 기준 */
+@theme {
+  --font-sans: "Pretendard Variable", Pretendard, "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
+
+  /* 따뜻한 오렌지 스케일 */
+  --color-primary: #ff8d00;
+  --color-primary-600: #fd7e14;
+  --color-primary-700: #f76707;
+  --color-primary-800: #e8590c;
+  --color-primary-100: #fff4e6;
+  --color-primary-300: #ffd8a8;
+
+  /* 중립 표면·텍스트 */
+  --color-surface: #f7f9fa;
+  --color-surface-10: #fbfcfd;
+  --color-surface-40: #f1f3f6;
+  --color-canvas: #ffffff;
+  --color-border: #dfe1e2;
+  --color-placeholder: #a9aeb1;
+  --color-meta: #8d9297;
+  --color-body: #71767a;
+  --color-strong: #3d4551;
+  --color-heading: #1c1d1f;
+
+  /* 시스템 */
+  --color-info: #228be6;
+  --color-error: #fa5252;
+
+  /* 라운드 스케일 */
+  --radius-card: 32px;
+  --radius-control: 12px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-surface);
+  color: var(--color-heading);
+  font-family: var(--font-sans);
+  font-style: normal;
 }
