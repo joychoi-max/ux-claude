@@ -16,10 +16,19 @@ ENV/
 # === 환경변수 · 비밀키 (절대 커밋 금지) ===
 .env
 .env.*
+!.env.example
 *.key
 *.pem
 secrets.json
 **/credentials.json
+
+# === Next.js / Node ===
+node_modules/
+.next/
+/out/
+/build
+*.tsbuildinfo
+.vercel
 
 # === Streamlit / RAG ===
 .streamlit/secrets.toml
