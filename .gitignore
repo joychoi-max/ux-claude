@@ -52,6 +52,9 @@ $RECYCLE.BIN/
 tmp/
 temp/
 
+# === 도구 캐시 (MCP 등) ===
+.playwright-mcp/
+
 # === 데이터 (대용량/민감) ===
 data/raw/
 *.csv
