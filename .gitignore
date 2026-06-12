@@ -1,0 +1,59 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+venv/
+.venv/
+env/
+ENV/
+
+# === 환경변수 · 비밀키 (절대 커밋 금지) ===
+.env
+.env.*
+*.key
+*.pem
+secrets.json
+**/credentials.json
+
+# === Streamlit / RAG ===
+.streamlit/secrets.toml
+*.faiss
+*.pkl
+faiss_index/
+
+# === Jupyter ===
+.ipynb_checkpoints/
+
+# === IDE / 에디터 ===
+.vscode/
+.idea/
+.cursor/
+*.swp
+*.swo
+
+# === OS ===
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+# macOS
+.DS_Store
+
+# === 로그 · 임시파일 ===
+*.log
+*.tmp
+tmp/
+temp/
+
+# === 데이터 (대용량/민감) ===
+data/raw/
+*.csv
+*.xlsx
+!docs/**/*.xlsx
