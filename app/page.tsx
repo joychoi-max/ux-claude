@@ -7,7 +7,11 @@ import { MobileFrame } from "./components/MobileFrame";
 
 export default function FirstMeetingScreen() {
   const [role, setRole] = useState("");
-  const hasRole = role.trim().length > 0;
+  const trimmedRole = role.trim();
+  const hasRole = trimmedRole.length > 0;
+  const setupHref = hasRole
+    ? `/setup?role=${encodeURIComponent(trimmedRole)}`
+    : "/setup";
 
   return (
     <MobileFrame>
@@ -63,7 +67,7 @@ export default function FirstMeetingScreen() {
         {/* 액션: 단일 primary CTA + 안심 보조 문구 */}
         <div className="mt-8 flex flex-col items-center gap-4">
           <Link
-            href="/setup"
+            href={setupHref}
             className="flex w-full items-center justify-center gap-2 rounded-[var(--radius-control)] bg-primary-600 px-5 py-4 text-[1.0625rem] font-semibold text-white transition-colors duration-200 ease-out hover:bg-primary-700 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary-100"
           >
             럭키랑 시작하기
